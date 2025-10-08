@@ -32,7 +32,7 @@ class TestLogin:
         driver.find_element(By.XPATH, "//span[@id='TANGRAM__PSP_11__changeSmsCodeItem']").click()
         sleep(2)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsPhone']").send_keys('15656083333')
-        sleep(2)
+        sleep(1)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsVerifyCode']").send_keys('111')
         sleep(2)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsIsAgree']").click()
