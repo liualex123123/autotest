@@ -4,9 +4,11 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+
+@allure.story("百度首页")
 class TestLogin:
-    @allure.feature("搜索")
-    @allure.story("搜索功能正常")
+
+    @allure.step("搜索功能正常")
     def test_demo_01(self):
         driver = webdriver.Chrome()
         driver.get('https://www.baidu.com/')
@@ -19,8 +21,7 @@ class TestLogin:
         driver.maximize_window()
         sleep(1)
 
-    @allure.feature("登录")
-    @allure.story("验证码错误，登录失败")
+    @allure.step("验证码错误，登录失败")
     def test_demo_02(self):#登录，输入错误信息报错
         driver = webdriver.Chrome()
         driver.get('https://www.baidu.com/')
