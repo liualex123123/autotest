@@ -1,11 +1,10 @@
 from time import sleep
 import allure
-import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-@allure.story("百度首页")
+@allure.title("百度首页")
 class TestLogin:
 
     @allure.step("搜索功能正常")
@@ -32,7 +31,7 @@ class TestLogin:
         driver.find_element(By.XPATH, "//span[@id='TANGRAM__PSP_11__changeSmsCodeItem']").click()
         sleep(2)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsPhone']").send_keys('15656083333')
-        sleep(2)
+        sleep(1)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsVerifyCode']").send_keys('111')
         sleep(2)
         driver.find_element(By.XPATH, "//input[@id='TANGRAM__PSP_11__smsIsAgree']").click()
